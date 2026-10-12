@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SereneSpace - Meditation and Mindfulness">
+  <title>SereneSpace | Meditation & Mindfulness</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#home">Serene<span>Space</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#practices">Practices</a></li>
+        <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-lg-2"><button class="btn btn-primary rounded-pill px-4" onclick="startSession()">Start Meditation</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="container">
+    <div class="row align-items-center min-vh-100 pt-5">
+      <div class="col-lg-6 py-5">
+        <div class="eyebrow">MINDFULNESS • BALANCE • PEACE</div>
+        <h1>Find your <em>calm</em>,<br>one breath at a time.</h1>
+        <p class="lead">Create a peaceful daily ritual with guided meditation, mindful breathing and simple practices designed for a calmer, clearer you.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <button class="btn btn-primary btn-lg rounded-pill px-4" onclick="startSession()">Begin a Session <span>→</span></button>
+          <a class="btn btn-outline-dark btn-lg rounded-pill px-4" href="#practices">Explore Practices</a>
+        </div>
+        <div class="hero-note mt-4"><span>●</span> A gentle 5-minute practice can be a beautiful beginning.</div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-art">
+          <div class="sun"></div>
+          <img src="image/hero.jpg" alt="Person meditating in nature" class="hero-img">
+          <div class="floating-card"><strong>5 min</strong><small>Mindful Breathing</small><button onclick="startSession()">Play ▶</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="image-stack">
+          <img src="image/meditation.jpg" alt="Meditation practice" class="main-photo">
+          <div class="quote-card">“Peace comes from within.”<small>— Mindfulness wisdom</small></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="eyebrow">ABOUT MINDFULNESS</div>
+        <h2>A little stillness can change your whole day.</h2>
+        <p>Mindfulness is the practice of paying attention to the present moment with openness and curiosity. Meditation gives that awareness a place to grow.</p>
+        <div class="row g-3 mt-3">
+          <div class="col-sm-6"><div class="mini-feature"><b>01</b><span><strong>Simple</strong><br>Begin anywhere, anytime.</span></div></div>
+          <div class="col-sm-6"><div class="mini-feature"><b>02</b><span><strong>Gentle</strong><br>Move at your own pace.</span></div></div>
+          <div class="col-sm-6"><div class="mini-feature"><b>03</b><span><strong>Daily</strong><br>Build a consistent habit.</span></div></div>
+          <div class="col-sm-6"><div class="mini-feature"><b>04</b><span><strong>Present</strong><br>Reconnect with now.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="practices" class="section-pad practices-section">
+  <div class="container">
+    <div class="text-center mx-auto section-heading">
+      <div class="eyebrow">EXPLORE PRACTICES</div>
+      <h2>Choose a practice for how you feel today.</h2>
+      <p>Different moments call for different kinds of mindfulness. Try one that fits your day.</p>
+    </div>
+    <div class="row g-4 mt-3">
+      <div class="col-md-6 col-lg-4">
+        <article class="practice-card"><img src="image/guided-meditation.jpg" alt="Guided meditation"><div><span class="tag">10 MIN</span><h3>Guided Meditation</h3><p>A gentle voice-led practice to settle the mind.</p><button onclick="showToast('Guided Meditation selected')">Start Practice →</button></div></article>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <article class="practice-card"><img src="image/breathing.jpg" alt="Breathing exercise"><div><span class="tag">5 MIN</span><h3>Mindful Breathing</h3><p>Slow your breath and create a little inner space.</p><button onclick="showToast('Mindful Breathing selected')">Start Practice →</button></div></article>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <article class="practice-card"><img src="image/body-scan.jpg" alt="Body scan meditation"><div><span class="tag">12 MIN</span><h3>Body Scan</h3><p>Bring friendly attention to sensations throughout the body.</p><button onclick="showToast('Body Scan selected')">Start Practice →</button></div></article>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <article class="practice-card"><img src="image/focus-meditation.jpg" alt="Focus meditation"><div><span class="tag">8 MIN</span><h3>Focus Practice</h3><p>Train your attention with a simple steady anchor.</p><button onclick="showToast('Focus Practice selected')">Start Practice →</button></div></article>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <article class="practice-card"><img src="image/loving-kindness.jpg" alt="Loving kindness meditation"><div><span class="tag">10 MIN</span><h3>Loving-Kindness</h3><p>Practice warmth, kindness and compassion toward yourself.</p><button onclick="showToast('Loving-Kindness selected')">Start Practice →</button></div></article>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <article class="practice-card"><img src="image/sleep-meditation.jpg" alt="Sleep meditation"><div><span class="tag">15 MIN</span><h3>Sleep Wind-Down</h3><p>Unplug from the day with a calming bedtime ritual.</p><button onclick="showToast('Sleep Wind-Down selected')">Start Practice →</button></div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="benefits" class="section-pad">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <div class="eyebrow">WHY PRACTICE?</div>
+        <h2>Make space for what matters.</h2>
+        <p>Regular mindfulness can be a useful wellbeing practice. Start small, notice how you feel, and build a routine that works for you.</p>
+        <a href="#contact" class="btn btn-primary rounded-pill px-4">Build Your Routine</a>
+      </div>
+      <div class="col-lg-7">
+        <div class="benefit-grid">
+          <div class="benefit"><span>◌</span><h3>Calmer moments</h3><p>Pause and respond with more awareness.</p></div>
+          <div class="benefit"><span>◎</span><h3>Better focus</h3><p>Practice returning attention to the present.</p></div>
+          <div class="benefit"><span>☾</span><h3>Evening ease</h3><p>Create a relaxing transition into bedtime.</p></div>
+          <div class="benefit"><span>♡</span><h3>Self-compassion</h3><p>Meet yourself with patience rather than judgment.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section-pad gallery-section">
+  <div class="container">
+    <div class="section-heading text-center mx-auto">
+      <div class="eyebrow">A MOMENT OF STILLNESS</div>
+      <h2>Peace can be found in simple places.</h2>
+    </div>
+    <div class="gallery-grid mt-4">
+      <img src="image/nature.jpg" alt="Peaceful nature">
+      <img src="image/mindfulness.jpg" alt="Mindfulness practice">
+      <img src="image/yoga.jpg" alt="Yoga and mindfulness">
+      <img src="image/benifits.jpg" alt="Mindfulness benefits">
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container text-center">
+    <div class="eyebrow">YOUR NEXT FIVE MINUTES</div>
+    <h2>Close your eyes. Take a breath. Begin.</h2>
+    <p>You don't need a perfect moment to practice. You only need this moment.</p>
+    <button class="btn btn-light btn-lg rounded-pill px-5" onclick="startSession()">Start 5-Minute Meditation</button>
+  </div>
+</section>
+
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5">
+        <div class="eyebrow">STAY CONNECTED</div>
+        <h2>Make mindfulness part of your routine.</h2>
+        <p>Have a question or want to share feedback? Send us a message.</p>
+        <div class="contact-detail"><span>✉</span> SereneSpace.@gmail.com</div>
+        <div class="contact-detail"><span>⌂</span> Everyday, wherever you are.</div>
+      </div>
+      <div class="col-lg-7">
+        <form class="contact-form" onsubmit="submitForm(event)">
+          <div class="row g-3">
+            <div class="col-md-6"><label>Your Name</label><input id="name" class="form-control" required placeholder="Enter your name"></div>
+            <div class="col-md-6"><label>Email</label><input type="email" class="form-control" required placeholder="you@example.com"></div>
+            <div class="col-12"><label>Message</label><textarea id="message" class="form-control" rows="5" required placeholder="How can we help?"></textarea></div>
+            <div class="col-12"><button class="btn btn-primary rounded-pill px-4" type="submit">Send Message →</button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container d-flex flex-wrap justify-content-between gap-3">
+    <div><a class="navbar-brand fw-bold text-white" href="#home">Serene<span>Space</span></a><p class="mb-0 mt-2">A simple space for mindful living.</p></div>
+    <div class="footer-links"><a href="#about">About</a><a href="#practices">Practices</a><a href="#benefits">Benefits</a><a href="#contact">Contact</a></div>
+    <div>All rights reserved. © <span id="year"></span> SereneSpace. Designed by Ved Gupta</div>
+  </div>
+</footer>
+
+<div class="modal fade" id="meditationModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content meditation-modal">
+      <div class="modal-body text-center p-5">
+        <div class="breath-circle" id="breathCircle"><span id="breathText">Breathe in</span></div>
+        <h3 class="mt-4">5-Minute Mindful Breathing</h3>
+        <p>Follow the circle and keep your attention gently on your breath.</p>
+        <div class="timer" id="timer">05:00</div>
+        <button class="btn btn-primary rounded-pill px-4" data-bs-dismiss="modal" onclick="stopMeditation()">Finish</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="site-toast"></div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
